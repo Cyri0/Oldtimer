@@ -1,5 +1,6 @@
 let nemElerheto = document.getElementById("nem-elerheto")
 
+// GET REQUEST FELADAT
 fetch("http://localhost:8000/api/nemelerheto/")
   .then(response => response.json())
   .then(result => {
@@ -7,7 +8,7 @@ fetch("http://localhost:8000/api/nemelerheto/")
     })
   .catch(error => console.log('error', error));
 
-
+// POST REQUEST FELADAT
 function velemenyKuldes(){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
